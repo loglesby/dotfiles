@@ -1,0 +1,167 @@
+wtf:
+  colors:
+    border:
+      focusable: darkslateblue
+      focused: orange
+      normal: gray
+  grid:
+    columns: [32, 32, 32, 32]
+    rows: [10, 10, 10, 10, 10, 10, 10, 10, 10]
+  refreshInterval: 1
+  mods:
+    clocks:
+      colors:
+        rows:
+          even: "lightblue"
+          odd: "white"
+      enabled: true
+      title: "Clocks"
+      type: "clocks"
+      locations:
+        - Kiel: "Europe/Berlin"
+        - London: "Europe/London"
+        - California: "America/Los_Angeles"
+        - UTC: "Etc/UTC"
+      position:
+        top: 0
+        left: 0
+        height: 1
+        width: 1
+      sort: "chronological"
+      refreshInterval: 15
+
+    prettyweather:
+        enabled: true
+        city: "london"
+        position:
+            top: 0
+            left: 1
+            height: 1
+            width: 1
+        refreshInterval: 5m
+        unit: "m"
+        view: 0
+        language: "en"
+
+    gcal:
+      colors:
+        title: "red"
+        eventTime: "lightblue"
+        description: "yellow"
+        highlights:
+        - ['1on1|1\/11', 'green']
+        - ['apple|google|aws', 'blue']
+        - ['interview|meet', 'magenta']
+        - ['lunch', 'yellow']
+        past: "gray"
+      calendarReadLevel: "reader"
+      conflictIcon: "🚨"
+      currentIcon: "💥"
+      displayResponseStatus: true
+      email: "luke.oglesby@mo.work"
+      enabled: true
+      eventCount: 15
+      hourFormat: "24"
+      multiCalendar: false
+      position:
+        top: 1
+        left: 0
+        height: 2
+        width: 2
+      refreshInterval: 5m
+      secretFile: "~/.config/wtf/gcal/client_secret.json"
+      showDeclined: true
+      showEndTime: false
+      timezone: "Europe/London"
+      withLocation: true
+
+    todoist:
+      apiKey: "4ab4237511ef70be615a8462cf851ef9b9e15016"
+      enabled: true
+      position:
+        top: 1
+        left: 2
+        height: 2
+        width: 2
+      projects:
+        - 22929866
+      refreshInterval: 5m
+
+    circleci:
+      apiKey: "987829ec6a400062f74d621d2010689e8820cc90"
+      enabled: true
+      position:
+        top: 3
+        left: 0
+        height: 2
+        width: 4
+      refreshInterval: 1m
+
+    github:
+      apiKey: "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"
+      baseURL: ""
+      customQueries:
+        othersPRs:
+          title: "Others Pull Requests"
+          filter: "is:open is:pr -author:wtfutil"
+      enabled: true
+      enableStatus: true
+      position:
+        top: 6
+        left: 0
+        height: 2
+        width: 4
+      refreshInterval: 1m
+      repositories:
+        - "mo-work/wegift-ruby-client"
+        - "mo-work/thanksbox-api"
+#        - "mo-work/feed-edge"
+      username: "loglesby"
+
+
+    uptimerobot:
+      apiKey: "ur1755752-2e7a3b66644e37da0ff26a6c"
+      enabled: true
+      offlineFirst: true
+      position:
+        top: 9
+        left: 0
+        height: 1
+        width: 2
+      refreshInterval: 1h
+      uptimePeriods: 7-30
+
+
+    ipinfo:
+      colors:
+        name: "lightblue"
+        value: "white"
+      enabled: true
+      position:
+        top: 10
+        left: 3
+        height: 1
+        width: 1
+      refreshInterval: 150
+    uptime:
+      args: [""]
+      cmd: "uptime"
+      enabled: true
+      position:
+        top: 10
+        left: 0
+        height: 1
+        width: 1
+      refreshInterval: 30
+      type: cmdrunner
+    ping:
+      args: ["8.8.8.8"]
+      cmd: "ping"
+      enabled: true
+      position:
+        top: 10
+        left: 1
+        height: 1
+        width: 2
+      refreshInterval: 30
+      type: cmdrunner
